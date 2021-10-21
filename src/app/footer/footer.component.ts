@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-
-import { NgbModule, NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-footer',
@@ -9,26 +8,17 @@ import { NgbModule, NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap'
 })
 export class FooterComponent {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(public dialog: MatDialog) {}
 
-  openEmailRejectionPopup() {
-    const modalRef = this.modalService.open(NgbdModalContent);
-    modalRef.componentInstance.name = '이메일주소 무단수집거부';
+  openEmailRejectionDialog(){
+    const dialogRef = this.dialog.open(EmailRejectionDialog, {
+      width: '600px'
+    });
   }
 }
-/*
-You can pass an existing component as content of the modal window.
-In this case, if you're still using Angular 8 or older, 
-remember to add the content component in the entryComponents section of your NgModule. 
-For Angular 9 or newer, it's not needed anymore.
-참조 : https://ng-bootstrap.github.io/#/components/modal/examples
-*/
+
 @Component({
-  selector: 'ngbd-modal-content',
+  selector: 'email-rejection-dialog',
   templateUrl: './rejection-unauthorized-email.html'
 })
-export class NgbdModalContent {
-  @Input() name: any;
-
-  constructor(public activeModal: NgbActiveModal) { }
-}
+export class EmailRejectionDialog {}

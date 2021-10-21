@@ -5,26 +5,76 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
-import { BodyComponent } from './body/body.component';
-import { PicBannerComponent } from './body/pic-banner/pic-banner.component';
-import { PicLocationComponent } from './body/pic-location/pic-location.component';
-import { PicWorshipInfoComponent } from './body/pic-worship-info/pic-worship-info.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+
+import { PastorIntroComponent } from './ch/chInfo/pastor-intro/pastor-intro.component';
+import { VisionComponent } from './ch/chInfo/vision/vision.component';
+import { ChurchEventComponent } from './ch/gallery/church-event/church-event.component';
+import { NewFamilyComponent } from './ch/gallery/new-family/new-family.component';
+import { ServiceHistoryComponent } from './ch/service/service-history/service-history.component';
+import { ServiceInfoComponent } from './ch/service/service-info/service-info.component';
+import { DefaultComponent } from './ch/default/default.component';
+import { EduMinistryComponent } from './ch/gallery/edu-ministry/edu-ministry.component';
+import { MissionMinistryComponent } from './ch/gallery/mission-ministry/mission-ministry.component';
+import { ClubsComponent } from './ch/gallery/clubs/clubs.component';
+import { KindersComponent } from './ch/chSchool/kinders/kinders.component';
+import { ElementsComponent } from './ch/chSchool/elements/elements.component';
+import { YouthsComponent } from './ch/chSchool/youths/youths.component';
+import { SinglesComponent } from './ch/chSchool/singles/singles.component';
+import { MenMinistryComponent } from './ch/meetings/men-ministry/men-ministry.component';
+import { WomenMinistryComponent } from './ch/meetings/women-ministry/women-ministry.component';
+import { SnDeaconessMinistryComponent } from './ch/meetings/sn-deaconess-ministry/sn-deaconess-ministry.component';
+import { ChurchWorkersComponent } from './ch/chInfo/church-workers/church-workers.component';
+import { ChurchHistoryComponent } from './ch/chInfo/church-history/church-history.component';
+import { LocationComponent } from './ch/chInfo/location/location.component';
+import { HosannaChoirComponent } from './ch/meetings/hosanna-choir/hosanna-choir.component';
+import { RodemChoirComponent } from './ch/meetings/rodem-choir/rodem-choir.component';
+import { SaesamOrchestraComponent } from './ch/meetings/saesam-orchestra/saesam-orchestra.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     FooterComponent,
-    BodyComponent,
-    PicBannerComponent,
-    PicLocationComponent,
-    PicWorshipInfoComponent
+    PastorIntroComponent,
+    VisionComponent,
+    ChurchEventComponent,
+    NewFamilyComponent,
+    ServiceHistoryComponent,
+    ServiceInfoComponent,
+    DefaultComponent,
+    EduMinistryComponent,
+    MissionMinistryComponent,
+    ClubsComponent,
+    KindersComponent,
+    ElementsComponent,
+    YouthsComponent,
+    SinglesComponent,
+    MenMinistryComponent,
+    WomenMinistryComponent,
+    SnDeaconessMinistryComponent,
+    ChurchWorkersComponent,
+    ChurchHistoryComponent,
+    LocationComponent,
+    HosannaChoirComponent,
+    RodemChoirComponent,
+    SaesamOrchestraComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,45 +1,58 @@
-<p>--- nav works! ---</p>
+<div class="container site-navigation debug-container">
+  <div class="row col-lg-12">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
 
-<div class="navContainer debug-container">
-  <div class="site-navigation">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <nav class="navbar navbar-expand-lg navbar-light p-0">
-
-            <div class="logo">
-              <a class="d-block" href="index.html">
-                <img loading="lazy" src="/assets/img/saesaemch_logo.PNG" alt="saesaemch_logo">
-              </a>
-            </div><!-- logo end -->
-            <!--
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-              aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          -->
-
-            
-            <div id="navbar-collapse" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav ml-auto align-items-center">
-                <li class="nav-item dropdown active">
-                  <a href="#" class="nav-link dropdown-toggle menu-item" data-toggle="dropdown-menu">교회안내 <em class="fa fa-angle-down"></em></a>
-                  <div class="dropdown-menu" role="menu">
-                    <a href='target="_self"'>home one</a>
-                    <a href="#">Home Two</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-         
-          </nav>
-        </div>
-        <!--/ Col end -->
+      <div class="logo">
+        <a class="d-block" href="index.html">
+          <img loading="lazy" src="/assets/img/saesaemch_logo.PNG" alt="saesaemch_logo">
+        </a>
       </div>
-      <!--/ Row end -->
-    </div>
-    <!--/ Container end -->
+      <!--end of logo-->
 
+      <button mat-button [matMenuTriggerFor]="churchInfo">교회안내</button>
+      <mat-menu #churchInfo="matMenu">
+        <button mat-menu-item routerLink="/pastorIntro" routerLinkActive="active"><span>담임목사소개</span></button>
+        <button mat-menu-item routerLink="/vision" routerLinkActive="active"><span>교회비전</span></button>
+        <button mat-menu-item routerLink="/churchWorkers" routerLinkActive="active"><span>사역자안내</span></button>
+        <button mat-menu-item routerLink="/churchHistory" routerLinkActive="active"><span>교회연혁</span></button>
+        <button mat-menu-item routerLink="/location" routerLinkActive="active"><span>찾아오시는 길</span></button>
+      </mat-menu>
+      <!--end of churchInfo-->
+
+      <button mat-button [matMenuTriggerFor]="worship">예배</button>
+      <mat-menu #worship="matMenu">
+        <button mat-menu-item routerLink="/serviceInfo" routerLinkActive="active">예배안내</button>
+        <button mat-menu-item routerLink="/serviceHistory" routerLinkActive="active">예배기록</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="gallery">새샘갤러리</button>
+      <mat-menu #gallery="matMenu">
+        <button mat-menu-item routerLink="/newFamily" routerLinkActive="active">새가족</button>
+        <button mat-menu-item routerLink="/churchEvent" routerLinkActive="active">교회행사</button>
+        <button mat-menu-item routerLink="/eduMinistry" routerLinkActive="active">교육부</button>
+        <button mat-menu-item routerLink="/missionMinistry" routerLinkActive="active">선교부</button>
+        <button mat-menu-item routerLink="/clubs" routerLinkActive="active">동아리</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="chSchool">교회학교</button>
+      <mat-menu #chSchool="matMenu">
+        <button mat-menu-item routerLink="/kinders" routerLinkActive="active">유치부</button>
+        <button mat-menu-item routerLink="/elements" routerLinkActive="active">초등부</button>
+        <button mat-menu-item routerLink="/youths" routerLinkActive="active">중고등부</button>
+        <button mat-menu-item routerLink="/singles" routerLinkActive="active">청년부</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="meetings">교제</button>
+      <mat-menu #meetings="matMenu">
+        <button mat-menu-item routerLink="/menMinistry" routerLinkActive="active">남전도회</button>
+        <button mat-menu-item routerLink="/womenMinistry" routerLinkActive="active">여전도회</button>
+        <button mat-menu-item routerLink="/snDeaconessMinistry" routerLinkActive="active">권사회</button>
+        <button mat-menu-item routerLink="/hosannaChoir" routerLinkActive="active">호산나찬양대</button>
+        <button mat-menu-item routerLink="/rodemChoir" routerLinkActive="active">로뎀찬양단</button>
+        <button mat-menu-item routerLink="/saesamOrchestra" routerLinkActive="active">새샘오케스트라</button>
+      </mat-menu>
+    </nav>
   </div>
+  <!--/ Row end -->
 </div>
 <!--/ Navigation end -->

@@ -1,11 +1,10 @@
-<p>--- footer works! ---</p>
-
-<div class="footerContainer debug-container">
+<div class="container debug-container">
 
     <ul class="list-inline">
         <li class="list-inline-item">[개인정보취급방침]</li>
         <li class="list-inline-item">[서비스이용약관]</li>
-        <li class="list-inline-item" (click)="openEmailRejectionPopup()">[이메일주소 무단수집거부]</li>
+        <!-- <li class="list-inline-item" (click)="openEmailRejectionPopup()">[이메일주소 무단수집거부]</li> -->
+        <li class="list-inline-item"><button mat-button (click)="openEmailRejectionDialog()">[이메일주소 무단수집거부]</button></li>
     </ul>
 
     <div style="height:20px; border-top:1px solid #454545;"></div>
