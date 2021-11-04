@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-footer',
@@ -8,13 +7,13 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class FooterComponent {
 
-  constructor(public dialog: MatDialog) {}
+  // constructor(public dialog: MatDialog) {}
 
-  openEmailRejectionDialog(){
-    const dialogRef = this.dialog.open(EmailRejectionDialog, {
-      width: '600px'
-    });
-  }
+  // openEmailRejectionDialog(){
+  //   const dialogRef = this.dialog.open(EmailRejectionDialog, {
+  //     width: '600px'
+  //   });
+  //}
 }
 
 @Component({

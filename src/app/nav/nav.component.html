@@ -1,58 +1,75 @@
-<div class="container site-navigation debug-container">
-  <div class="row col-lg-12">
-    <nav class="navbar navbar-expand-lg navbar-light p-0">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">새샘교회</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-      <div class="logo">
-        <a class="d-block" href="index.html">
-          <img loading="lazy" src="/assets/img/saesaemch_logo.PNG" alt="saesaemch_logo">
-        </a>
-      </div>
-      <!--end of logo-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="churchInfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            교회안내
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="churchInfo">
+            <li><a class="dropdown-item" routerLink="/pastorIntro" routerLinkActive="active">담임목사소개</a></li>
+            <li><a class="dropdown-item" routerLink="/vision" routerLinkActive="active">교회비전</a></li>
+            <li><a class="dropdown-item" routerLink="/churchWorkers" routerLinkActive="active">사역자안내</a></li>
+            <li><a class="dropdown-item" routerLink="/churchHistory" routerLinkActive="active">교회연혁</a></li>
+            <li><a class="dropdown-item" routerLink="/location" routerLinkActive="active">찾아오시는 길</a></li>
+          </ul>
+        </li>
 
-      <button mat-button [matMenuTriggerFor]="churchInfo">교회안내</button>
-      <mat-menu #churchInfo="matMenu">
-        <button mat-menu-item routerLink="/pastorIntro" routerLinkActive="active"><span>담임목사소개</span></button>
-        <button mat-menu-item routerLink="/vision" routerLinkActive="active"><span>교회비전</span></button>
-        <button mat-menu-item routerLink="/churchWorkers" routerLinkActive="active"><span>사역자안내</span></button>
-        <button mat-menu-item routerLink="/churchHistory" routerLinkActive="active"><span>교회연혁</span></button>
-        <button mat-menu-item routerLink="/location" routerLinkActive="active"><span>찾아오시는 길</span></button>
-      </mat-menu>
-      <!--end of churchInfo-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="worship" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            예배
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="worship">
+            <li><a class="dropdown-item" routerLink="/serviceInfo" routerLinkActive="active">예배안내</a></li>
+            <li><a class="dropdown-item" routerLink="/serviceHistory" routerLinkActive="active">예배기록</a></li>
+          </ul>
+        </li>
 
-      <button mat-button [matMenuTriggerFor]="worship">예배</button>
-      <mat-menu #worship="matMenu">
-        <button mat-menu-item routerLink="/serviceInfo" routerLinkActive="active">예배안내</button>
-        <button mat-menu-item routerLink="/serviceHistory" routerLinkActive="active">예배기록</button>
-      </mat-menu>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="gallery" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            새샘갤러리
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="gallery">
+            <li><a class="dropdown-item" routerLink="/newFamily" routerLinkActive="active">새가족</a></li>
+            <li><a class="dropdown-item" routerLink="/churchEvent" routerLinkActive="active">교회행사</a></li>
+            <li><a class="dropdown-item" routerLink="/eduMinistry" routerLinkActive="active">교육부</a></li>
+            <li><a class="dropdown-item" routerLink="/missionMinistry" routerLinkActive="active">선교부</a></li>
+            <li><a class="dropdown-item" routerLink="/clubs" routerLinkActive="active">동아리</a></li>
+          </ul>
+        </li>
 
-      <button mat-button [matMenuTriggerFor]="gallery">새샘갤러리</button>
-      <mat-menu #gallery="matMenu">
-        <button mat-menu-item routerLink="/newFamily" routerLinkActive="active">새가족</button>
-        <button mat-menu-item routerLink="/churchEvent" routerLinkActive="active">교회행사</button>
-        <button mat-menu-item routerLink="/eduMinistry" routerLinkActive="active">교육부</button>
-        <button mat-menu-item routerLink="/missionMinistry" routerLinkActive="active">선교부</button>
-        <button mat-menu-item routerLink="/clubs" routerLinkActive="active">동아리</button>
-      </mat-menu>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="chSchool" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            교회학교
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="chSchool">
+            <li><a class="dropdown-item" routerLink="/kinders" routerLinkActive="active">유치부</a></li>
+            <li><a class="dropdown-item" routerLink="/elements" routerLinkActive="active">초등부</a></li>
+            <li><a class="dropdown-item" routerLink="/youths" routerLinkActive="active">중고등부</a></li>
+            <li><a class="dropdown-item" routerLink="/singles" routerLinkActive="active">청년부</a></li>
+          </ul>
+        </li>
 
-      <button mat-button [matMenuTriggerFor]="chSchool">교회학교</button>
-      <mat-menu #chSchool="matMenu">
-        <button mat-menu-item routerLink="/kinders" routerLinkActive="active">유치부</button>
-        <button mat-menu-item routerLink="/elements" routerLinkActive="active">초등부</button>
-        <button mat-menu-item routerLink="/youths" routerLinkActive="active">중고등부</button>
-        <button mat-menu-item routerLink="/singles" routerLinkActive="active">청년부</button>
-      </mat-menu>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="meetings" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            교제
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="meetings">
+            <li><a class="dropdown-item" routerLink="/menMinistry" routerLinkActive="active">남전도회</a></li>
+            <li><a class="dropdown-item" routerLink="/womenMinistry" routerLinkActive="active">여전도회</a></li>
+            <li><a class="dropdown-item" routerLink="/snDeaconessMinistry" routerLinkActive="active">권사회</a></li>
+            <li><a class="dropdown-item" routerLink="/hosannaChoir" routerLinkActive="active">호산나찬양대</a></li>
+            <li><a class="dropdown-item" routerLink="/rodemChoir" routerLinkActive="active">로뎀찬양단</a></li>
+            <li><a class="dropdown-item" routerLink="/saesamOrchestra" routerLinkActive="active">새샘오케스트라</a></li>
+          </ul>
+        </li>
 
-      <button mat-button [matMenuTriggerFor]="meetings">교제</button>
-      <mat-menu #meetings="matMenu">
-        <button mat-menu-item routerLink="/menMinistry" routerLinkActive="active">남전도회</button>
-        <button mat-menu-item routerLink="/womenMinistry" routerLinkActive="active">여전도회</button>
-        <button mat-menu-item routerLink="/snDeaconessMinistry" routerLinkActive="active">권사회</button>
-        <button mat-menu-item routerLink="/hosannaChoir" routerLinkActive="active">호산나찬양대</button>
-        <button mat-menu-item routerLink="/rodemChoir" routerLinkActive="active">로뎀찬양단</button>
-        <button mat-menu-item routerLink="/saesamOrchestra" routerLinkActive="active">새샘오케스트라</button>
-      </mat-menu>
-    </nav>
+      </ul>
+    </div>
   </div>
-  <!--/ Row end -->
-</div>
-<!--/ Navigation end -->
+</nav>

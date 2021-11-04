@@ -9,3 +9,29 @@
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* custom style */
+.b_menu_title {
+    font-size: x-large;
+    font-weight: bold;
+    color: blue;
+}
+
+.b-red {
+    border-color:red;
+    border-width: 1px;
+    border-style: dashed;
+}
+
+.b-black {
+    border-color:black;
+    border-width: 1px;
+    border-style: dashed;
+}
+
+.b-blue {
+    border-color:blue;
+    border-width: 1px;
+    border-style: dashed;
+}

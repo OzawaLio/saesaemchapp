@@ -8,11 +8,6 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
-
 import { PastorIntroComponent } from './ch/chInfo/pastor-intro/pastor-intro.component';
 import { VisionComponent } from './ch/chInfo/vision/vision.component';
 import { ChurchEventComponent } from './ch/gallery/church-event/church-event.component';
@@ -70,11 +65,7 @@ import { SaesamOrchestraComponent } from './ch/meetings/saesam-orchestra/saesam-
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatDialogModule,
-    MatButtonModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
