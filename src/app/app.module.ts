@@ -32,6 +32,8 @@ import { HosannaChoirComponent } from './ch/meetings/hosanna-choir/hosanna-choir
 import { RodemChoirComponent } from './ch/meetings/rodem-choir/rodem-choir.component';
 import { SaesamOrchestraComponent } from './ch/meetings/saesam-orchestra/saesam-orchestra.component';
 
+import { NgMaterialModule } from './ng-material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,13 +61,14 @@ import { SaesamOrchestraComponent } from './ch/meetings/saesam-orchestra/saesam-
     LocationComponent,
     HosannaChoirComponent,
     RodemChoirComponent,
-    SaesamOrchestraComponent
+    SaesamOrchestraComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="text-center">
+    <div class="m-1 p-3 b_menu_title b-blue text-center">
         예배안내
     </div>
 
@@ -10,44 +10,55 @@
         하나님은 영이시니 예배하는 자가 신령과 진정으로 예배할지니라
     </div>
 
-    <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 text-center">
-        <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef>구분</th>
-            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="time">
-            <td mat-header-cell *matHeaderCellDef>예배시간</td>
-            <td mat-cell *matCellDef="let element">{{ element.time }}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="place">
-            <td mat-header-cell *matHeaderCellDef>장소</td>
-            <td mat-cell *matCellDef="let element">{{ element.place }}</td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table> -->
-
-    <hr>
-
-    <table class="table">
+    <div class="m-1 p-2 h4 b-red">
+        주 예배
+    </div>
+    <table class="table text-center">
         <thead class="table-light">
-          <tr>
-              <td>
-                  구분
-              </td>
-              <td>
-                  예배시간
-              </td>
-              <td>
-                  장소
-              </td>
-          </tr>
+            <tr>
+                <th>
+                    구분
+                </th>
+                <th>
+                    예배시간
+                </th>
+                <th>
+                    장소
+                </th>
+            </tr>
         </thead>
         <tbody>
-          ...
+            <tr *ngFor="let data of mServiceInfo">
+                <td>{{data.name}}</td>
+                <td>{{data.time}}</td>
+                <td>{{data.place}}</td>
+            </tr>
         </tbody>
-      </table>
+    </table>
+
+    <div class="m-1 p-2 h4 b-red">
+        교육기관 예배
+    </div>
+    <table class="table text-center">
+        <thead class="table-light">
+            <tr>
+                <td>
+                    구분
+                </td>
+                <td>
+                    예배시간
+                </td>
+                <td>
+                    장소
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of sServiceInfo">
+                <td>{{data.name}}</td>
+                <td>{{data.time}}</td>
+                <td>{{data.place}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

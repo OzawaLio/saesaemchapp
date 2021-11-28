@@ -1,68 +1,68 @@
 <div class="container">
-    <div class="text-center">
-        섬기는사람들
+    <div class="m-1 p-3 b_menu_title b-blue text-center">
+        섬기는 사람들
     </div>
-    <div>
-        <p>목사</p>
-        <div>
-            담임목사
-        </div>
-        <div>
-            명예목사
-        </div>
-        <div>
-            부목사
-        </div>
-    </div>
+
+    <h2 class="m-1 p-3 b-black">목사</h2>
+    <mat-grid-list cols="2" rowHeight="4:1">
+        <mat-grid-tile *ngFor="let pastor of pastors" class="b-red">
+            <img src={{pastor.img}} style="width:90px; height: 100px;" />
+            <ul>
+                <li>
+                    <span>이름 : {{pastor.name}}</span>
+                </li>
+                <li>
+                    <span>직책 : {{pastor.position}}</span>
+                </li>
+            </ul>
+        </mat-grid-tile>
+    </mat-grid-list>
     <hr>
-    <div>
-        <p>전도사</p>
-        <div>
-            신명철 전도사
-        </div>
-        <div>
-            박한웅 전도사
-        </div>
-    </div>
+
+    <h2 class="m-1 p-3 b-black">전도사</h2>
+    <mat-grid-list cols="2" rowHeight="4:1">
+        <mat-grid-tile *ngFor="let junior of juniorPastors" class="b-red">
+            <img src={{junior.img}} style="width:90px; height: 100px;" />
+            <ul>
+                <li>
+                    <span>이름 : {{junior.name}}</span>
+                </li>
+                <li>
+                    <span>직책 : {{junior.position}}</span>
+                </li>
+            </ul>
+        </mat-grid-tile>
+    </mat-grid-list>
     <hr>
-    <div>
-        <p>시무장로</p>
-        <div>
-            정영철 장로
-        </div>
-        <div>
-            고재용 장로
-        </div>
-        <div>
-            김창민 장로
-        </div>
-        <div>
-            정규서 장로
-        </div>
-        <div class="">
-            김종섭 장로
-        </div>
-        <div>
-            이한봉 장로
-        </div>
-        <div class="">
-            박동진 장로
-        </div>
-    </div>
+
+    <h2 class="m-1 p-3 b-black">시무장로</h2>
+    <mat-grid-list cols="2" rowHeight="4:1">
+        <mat-grid-tile *ngFor="let elder of elders" class="b-red">
+            <img src={{elder.img}} style="width:90px; height: 100px;" />
+            <ul>
+                <li>
+                    <span>이름 : {{elder.name}}</span>
+                </li>
+                <li>
+                    <span>직책 : {{elder.position}}</span>
+                </li>
+            </ul>
+        </mat-grid-tile>
+    </mat-grid-list>
     <hr>
-    <div>
-        <p>명예장로</p>
-        <div class="">
-            박종진 장로
-        </div>
-        <div class="">
-            박창대 장로
-        </div>
-        <div class="">
-            이광일 장로
-        </div>
-        <div class="">
-            엄기식 장로
-        </div>
-    </div>
+
+    <h2 class="m-1 p-3 b-black">명예장로</h2>
+    <mat-grid-list cols="2" rowHeight="4:1">
+        <mat-grid-tile *ngFor="let honor of honoraryElders" class="b-red">
+            <img src={{honor.img}} style="width:90px; height: 100px;" />
+            <ul>
+                <li>
+                    <span>이름 : {{honor.name}}</span>
+                </li>
+                <li>
+                    <span>직책 : {{honor.position}}</span>
+                </li>
+            </ul>
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>

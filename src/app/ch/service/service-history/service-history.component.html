@@ -1,1 +1,49 @@
-<p>service-history works!</p>
+<div class="container">
+    <div class="m-1 p-3 b_menu_title b-blue text-center">
+        예배기록
+    </div>
+
+    <!-- filter
+    <div class="example-header">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+    </div> -->
+
+    <table mat-table [dataSource]="dataSource" class="text-center">
+        <!--설교제목-->
+        <ng-container matColumnDef="title">
+            <th mat-header-cell class="text-center" *matHeaderCellDef>설교제목</th>
+            <td mat-cell *matCellDef="let service">{{service.title}}</td>
+        </ng-container>
+
+        <!--예배시간-->
+        <ng-container matColumnDef="time">
+            <th mat-header-cell class="text-center" *matHeaderCellDef>예배시간</th>
+            <td mat-cell *matCellDef="let service">{{service.time}}</td>
+        </ng-container>
+
+        <!--말씀-->
+        <ng-container matColumnDef="testament">
+            <th mat-header-cell class="text-center" *matHeaderCellDef>말씀</th>
+            <td mat-cell *matCellDef="let service">{{service.testament}}</td>
+        </ng-container>
+
+        <!--설교자-->
+        <ng-container matColumnDef="preacher">
+            <th mat-header-cell class="text-center" *matHeaderCellDef>설교자</th>
+            <td mat-cell *matCellDef="let service">{{service.preacher}}</td>
+        </ng-container>
+
+        <!--예배링크-->
+        <ng-container matColumnDef="link">
+            <th mat-header-cell class="text-center" *matHeaderCellDef>예배링크</th>
+            <td mat-cell *matCellDef="let service"><a mat-flat-button href={{service.link}}> 유튜브 링크</a></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator pageSize="10" showFirstLastButtons></mat-paginator>
+</div>
